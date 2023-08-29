@@ -42,13 +42,8 @@ const myArr = ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 
 function replaceEvens(arr){
     for (idx in arr)
-        // == operator will check for loose equality in javascript, where as === would have to be more strict.
-        // like making sure both values are integers.
-        // doing this same thing with === would make either 0 being '0' instead or using parseint(idx)
-        if (idx == 0){
-            arr[idx] = `${arr[idx]}`;
-        } else if(idx % 2 === 0)
-            arr[idx] = `${arr[idx]} was an even index`;
+        if(idx % 2 === 0)
+            arr[idx] = `even index`;
     return arr;
 }
 console.log(replaceEvens(myArr))
